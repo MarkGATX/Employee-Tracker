@@ -34,13 +34,13 @@ function selectAction() {
                      departments.viewDept();
                     break;
                 case 'View all employee roles':
-                    // viewEmpRoles();
+                    employees.viewEmpRoles();
                     break;
                 case 'View all employees':
-                    // viewAllEmp();
+                    employees.viewAllEmp();
                     break;
                 case 'Add a department':
-                    //addDept();
+                    departments.addDept();
                     break;
                 case 'Add a role':
                     //addRole();
