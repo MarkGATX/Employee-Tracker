@@ -1,3 +1,4 @@
+
 const express = require('express');
 const path = require('path')
 const mysql2 = require('mysql2');
@@ -5,7 +6,8 @@ const cTable = require('console.table');
 const inquirer = require('inquirer');
 const employees = require('../lib/employees.js');
 const departments = require('../lib/departments.js');
-const roles = require('../lib/roles.js')
+const roles = require('../lib/roles.js')  
+
 
 const db = mysql2.createConnection({
     host: 'localhost',
@@ -83,4 +85,6 @@ selectAction();
 
 startApp();
 
-module.exports = { selectAction }
+module.exports = { selectAction };   
+  
+ 
