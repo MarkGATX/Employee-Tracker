@@ -1,30 +1,22 @@
 const express = require('express');
 const path = require('path')
-const db = require('./db/db.json')
 const mysql2 = require('mysql2');
 const cTable = require('console.table');
-const inquirer = require('inquirer')
+const inquirer = require('inquirer');
+const employees = require('../lib/employees.js');
+const departments = require('../lib/departments.js');
+const roles = require('../lib/roles.js')
 
+const db = mysql2.createConnection({
+    host: 'localhost',
+    user: 'root',
+    database: 'employees_db',
+    password: 'Z@h@dum3MYSQL'
+  });
 
-return `
+// 
 
-______                 _                       
-|  ____|               | |                      
-| |__   _ __ ___  _ __ | | ___  _   _  ___  ___ 
-|  __| | '_ \` _ \| '_ \| |/ _ \| | | |/ _ \/ _ \
-| |____| | | | | | |_) | | (_) | |_| |  __/  __/
-|______|_| |_| |_| .__/|_|\___/ \__, |\___|\___|
-|  \/  |         | |             __/ |          
-| \  / | __ _ _ ___| __ _  __ _ |___/_ __       
-| |\/| |/ _\` | '_ \ / _\` |/ _\` |/ _ \ '__|      
-| |  | | (_| | | | | (_| | (_| |  __/ |         
-|_|  |_|\__,_|_| |_|\__,_|\__, |\___|_|         
-                           __/ |                
-                          |___/              
-                          
-                          
-             We're always watching.             `
-
+//initial prompts to select actions
 function selectAction() {
     inquirer.prompt([
         {
@@ -35,9 +27,9 @@ function selectAction() {
         },
     ])
         .then((response) => {
-            switch (response) {
+            switch (response.action) {
                 case 'View all departments':
-                    // viewDept();
+                     departments.viewDept();
                     break;
                 case 'View all employee roles':
                     // viewEmpRoles();
@@ -65,3 +57,6 @@ function selectAction() {
         }
         );
 }
+selectAction();
+
+module.exports = { selectAction }
