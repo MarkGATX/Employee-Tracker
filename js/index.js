@@ -46,7 +46,7 @@ function selectAction() {
                     roles.addRole();
                     break;
                 case 'Add an employee':
-                    //addEmp();
+                    employees.addEmp();
                     break;
                 case 'Update an Employee Role':
                     //updateEmpRole();
