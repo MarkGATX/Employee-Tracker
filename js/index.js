@@ -43,7 +43,7 @@ function selectAction() {
                     departments.addDept();
                     break;
                 case 'Add a role':
-                    //addRole();
+                    roles.addRole();
                     break;
                 case 'Add an employee':
                     //addEmp();
