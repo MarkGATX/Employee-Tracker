@@ -49,7 +49,7 @@ function selectAction() {
                     employees.addEmp();
                     break;
                 case 'Update an Employee Role':
-                    //updateEmpRole();
+                    employees.updateEmpRole();
                     break;
                 default:
                     console.log('Please make a valid selection');
