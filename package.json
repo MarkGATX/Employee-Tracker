@@ -6,5 +6,27 @@
     "mysql2": "^2.3.3",
     "path": "^0.12.7",
     "Promise": "^1.0.5"
-  }
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "employee-tracker",
+  "description": "A command line interface to manage employees in a fictional company",
+  "version": "1.0.0",
+  "main": "server.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarkGATX/Employee-Tracker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MarkGATX/Employee-Tracker/issues"
+  },
+  "homepage": "https://github.com/MarkGATX/Employee-Tracker#readme"
 }
