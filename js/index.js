@@ -6,7 +6,7 @@ const cTable = require('console.table');
 const inquirer = require('inquirer');
 const employees = require('../lib/employees.js');
 const departments = require('../lib/departments.js');
-const roles = require('../lib/roles.js')  
+const roles = require('../lib/roles.js')
 
 
 const db = mysql2.createConnection({
@@ -14,7 +14,7 @@ const db = mysql2.createConnection({
     user: 'root',
     database: 'employees_db',
     password: 'Z@h@dum3MYSQL'
-  });
+});
 
 // 
 
@@ -25,13 +25,13 @@ function selectAction() {
             type: 'list',
             message: 'What would you like to do?',
             name: 'action',
-            choices: ['View all departments', 'View all employee roles', 'View all employees', 'Add a department', 'Add a role', 'Add an employee', 'Update an Employee Role','Update Employee Manager', 'View Employees by Manager', 'View Employees by Department', 'View Total Utilized Budget by Department', 'Delete Department']
+            choices: ['View all departments', 'View all employee roles', 'View all employees', 'Add a department', 'Add a role', 'Add an employee', 'Update an Employee Role', 'Update Employee Manager', 'View Employees by Manager', 'View Employees by Department', 'View Total Utilized Budget by Department', 'Delete Department', 'Delete Job Title', 'Delete Employee']
         },
     ])
         .then((response) => {
             switch (response.action) {
                 case 'View all departments':
-                     departments.viewDept();
+                    departments.viewDept();
                     break;
                 case 'View all employee roles':
                     employees.viewEmpRoles();
@@ -66,6 +66,12 @@ function selectAction() {
                 case 'Delete Department':
                     departments.deleteDept();
                     break;
+                case 'Delete Job Title':
+                    roles.deleteRole();
+                    break;
+                case 'Delete Employee':
+                    employees.deleteEmp();
+                    break;
                 default:
                     console.log('Please make a valid selection');
                     selectAction();
@@ -95,11 +101,10 @@ function startApp() {
  
  
                             `)
-selectAction();
+    selectAction();
 }
 
 startApp();
 
-module.exports = { selectAction };   
-  
- 
+module.exports = { selectAction };
+
