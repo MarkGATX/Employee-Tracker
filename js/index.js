@@ -25,7 +25,7 @@ function selectAction() {
             type: 'list',
             message: 'What would you like to do?',
             name: 'action',
-            choices: ['View all departments', 'View all employee roles', 'View all employees', 'Add a department', 'Add a role', 'Add an employee', 'Update an Employee Role','Update Employee Manager', 'View Employees by Manager', 'View Employees by Department', 'View Total Utilized Budget by Department']
+            choices: ['View all departments', 'View all employee roles', 'View all employees', 'Add a department', 'Add a role', 'Add an employee', 'Update an Employee Role','Update Employee Manager', 'View Employees by Manager', 'View Employees by Department', 'View Total Utilized Budget by Department', 'Delete Department']
         },
     ])
         .then((response) => {
@@ -62,6 +62,9 @@ function selectAction() {
                     break;
                 case 'View Total Utilized Budget by Department':
                     departments.viewTotalBudg();
+                    break;
+                case 'Delete Department':
+                    departments.deleteDept();
                     break;
                 default:
                     console.log('Please make a valid selection');
