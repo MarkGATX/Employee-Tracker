@@ -1,5 +1,5 @@
 # Employee Tracker CMS Application
-A command line application to log the members of a team of employees and pass that data on to an HTML page for use
+A command line application to log the members of a team of employees.
 
 
 ## The 12th challenge in the UT-Austin Full Stack Development Bootcamp - Create an Employee Tracking application from scratch
