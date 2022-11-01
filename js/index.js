@@ -1,12 +1,12 @@
-
-const express = require('express');
 const path = require('path')
 const mysql2 = require('mysql2');
 const cTable = require('console.table');
 const inquirer = require('inquirer');
 const employees = require('../lib/employees.js');
 const departments = require('../lib/departments.js');
-const roles = require('../lib/roles.js')
+const roles = require('../lib/roles.js');
+const { appendFile } = require('fs');
+
 
 
 const db = mysql2.createConnection({
@@ -81,30 +81,7 @@ function selectAction() {
         );
 };
 
-function startApp() {
-    console.log(`
-    
-    
-   ______                 _                       
-  |  ____|               | |                      
-  | |__   _ __ ___  _ __ | | ___  _   _  ___  ___ 
-  |  __| | '_ \` _ \\| '_ \\| |/ _ \\| | | |/ _ \\/ _ \\
-  | |____| | | | | | |_) | | (_) | |_| |  __/  __/
-  |______|_| |_| |_| .__/|_|\\___/ \\__, |\\___|\\___|
-  |  \\/  |         | |             __/ |          
-  | \\  / | __ _ _ _|_| __ _  __ _ |___/_ __       
-  | |\\/| |/ _\` | '_ \\ / _\` |/ _\` |/ _ \\ '__|      
-  | |  | | (_| | | | | (_| | (_| |  __/ |         
-  |_|  |_|\\__,_|_| |_|\\__,_|\\__, |\\___|_|         
-                             __/ |                
-                            |___/                 
- 
- 
-                            `)
-    selectAction();
-}
 
-startApp();
 
 module.exports = { selectAction };
 

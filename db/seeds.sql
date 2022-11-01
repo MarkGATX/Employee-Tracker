@@ -24,4 +24,4 @@ VALUES (100, 'Buffy', 'Summers', 11, null),
         (405, 'Dirk', 'Smiley', 41, null),
         (503, 'Moira', 'Rose', 51, null),
         (504, 'Alexis', 'Rose', 51, 503),
-        (605, 'Nyotta', 'Ohura', 61, null);
+        (605, 'Nyotta', 'uhura', 61, null);
