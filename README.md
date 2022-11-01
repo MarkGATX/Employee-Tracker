@@ -12,7 +12,7 @@ Our work on backend systems continues with deep dives into databases and SQL. Th
 
 Because this isn't a deployed app, there's not a link to a live site showing it's functionality. Instead, you can watch a video here that shows how it works.
 
-[Video of the Development Team Generator in Action](https://drive.google.com/file/d/1lSUTUFGxwM-rN99UC_Orp-QTecgInhgt/view)
+[Video of the Employee Management System](https://drive.google.com/file/d/1mL6udyd3-a3jmKwdO2XobYSEDuIAJ12D/view)
 
 
 ___
